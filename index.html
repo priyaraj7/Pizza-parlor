@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza-Parlor</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm justify-content-center">
+      <h1>Pizza-Parlor</h1>
+    </nav>
+    <div class="container">
+      <!-- Main page -->
+
+      <div class="mainpage">
+        <p><span id="welcome">Welcome</span></p>
+        <p>We cooked your Desired Pizza recipe</p>
+        <img src="img/images1.jpg" alt="an image of a pizza" />
+        <p></p>
+        <button class="bg-danger" type="submit">Order now</button>
+        <button class="bg-success" type="submit">Customize</button>
+      </div>
+
+      <!-- For Customize button -->
+      <div class="custom">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Choose Size</h3>
+            <form id="size">
+              <input type="radio" id="small" name="size" value="small" />
+              <label for="small">Small</label><br />
+              <input type="radio" id="medium" name="size" value="medium" />
+              <label for="medium">Medium</label><br />
+              <input type="radio" id="large" name="size" value="large" />
+              <label for="large">Large</label>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <h3>Choose Extra-Toppings</h3>
+            <form id="cheese">
+              <input type="radio" id="cheese" name="size" value="cheese" />
+              <label for="cheese">Cheese</label><br />
+            </form>
+            <form id="pepperoni">
+              <input
+                type="radio"
+                id="pepperoni"
+                name="size"
+                value="pepperoni"
+              />
+              <label for="pepperoni">Pepperoni</label><br />
+            </form>
+            <form id="mushroom">
+              <input type="radio" id="mushroom" name="size" value="mushroom" />
+              <label for="mushroom">Mushroom</label>
+            </form>
+            <form id="onion">
+              <input type="radio" id="onion" name="size" value="onion" />
+              <label for="onion">Red Onion</label>
+            </form>
+          </div>
+        </div>
+        <button class="bg-danger" type="submit">Check out</button>
+      </div>
+      <!-- order summary -->
+      <div class="sidenav order">
+        <h3>Order summary</h3>
+        <p>Your Total: <span id="price"></span></p>
+        <h5>Enter your Delivery Address</h5>
+        <form id="name">
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter your Fullname"
+          />
+        </form>
+        <form>
+          <br />
+
+          <textarea
+            rows="3"
+            cols="20"
+            name="address"
+            id="address"
+            placeholder="Enter your Address"
+          ></textarea>
+        </form>
+        <button class ="bg-primary"type="submit">Place your Order</button>
+      </div>
+
+      <!-- Thank you -->
+      <div class="thanks">
+        <h2>Dear Customer!</h2>
+
+        <p>
+          There is nothing that makes us happier than seeing that your order is
+          complete. Your purchase will be at your doorstep shortly, ready to
+          become a part of your household.
+        </p>
+
+        <p>Thank you for your order and we hope we’ll be seeing you again!</p>
+      </div>
+    </div>
+  </body>
+</html>

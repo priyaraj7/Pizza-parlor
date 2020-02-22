@@ -1,0 +1,53 @@
+body {
+  background-color: #f0e9e9;
+}
+#welcome {
+  font-family: cursive;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.navbar {
+  background-color: brown;
+  color: aliceblue;
+}
+.mainpage {
+  padding: 40px;
+  margin-left: 80px;
+  text-align: center;
+  /* display: none; */
+}
+.mainpage p {
+  font-size: 30px;
+}
+.mainpage button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.custom {
+  /* display: none; */
+  padding: 100px; 
+  margin-right: 200px;
+}
+.custom button{
+  font-size: 24px;
+}
+
+.sidenav {
+  /* display: none; */
+  margin-top: 75px;
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */  
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: lightgrey; 
+  padding: 60px; 
+}
+.thanks {
+  /* display: none; */
+  margin-top:80px ;
+}

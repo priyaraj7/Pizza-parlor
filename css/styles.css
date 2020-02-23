@@ -30,7 +30,7 @@ body {
   font-size: 16px;
 }
 .custom {
-  /* display: none; */
+  display: none;
   padding: 100px; 
   margin-right: 200px;
 }

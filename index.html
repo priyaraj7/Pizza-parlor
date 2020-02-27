@@ -43,19 +43,47 @@
           <div class="col-md-6">
             <h3>Choose Size</h3>
             <form id="size">
-              <input type="radio" id="small" name="size" value="small" />
-              <label for="small">Small</label><br />
-              <input type="radio" id="medium" name="size" value="medium" />
-              <label for="medium">Medium</label><br />
-              <input type="radio" id="large" name="size" value="large" />
-              <label for="large">Large</label>
+              <input
+                type="radio"
+                id="small"
+                name="size"
+                value="small"
+                data-name="small"
+                data-price="10"
+              />
+              <label for="small">Small ($10)</label><br />
+              <input
+                type="radio"
+                id="medium"
+                name="size"
+                value="medium"
+                data-name="medium"
+                data-price="12"
+              />
+              <label for="medium">Medium ($12)</label><br />
+              <input
+                type="radio"
+                id="large"
+                name="size"
+                value="large"
+                data-name="large"
+                data-price="14"
+              />
+              <label for="large">Large ($14)</label>
             </form>
           </div>
           <div class="col-md-6">
             <h3>Choose Extra-Toppings</h3>
             <form id="cheese">
-              <input type="radio" id="cheese" name="size" value="cheese" />
-              <label for="cheese">Cheese</label><br />
+              <input
+                type="radio"
+                id="cheese"
+                name="size"
+                value="cheese"
+                data-name="cheese"
+                data-price="2"
+              />
+              <label for="cheese">Cheese (+$2)</label><br />
             </form>
             <form id="pepperoni">
               <input
@@ -63,25 +91,47 @@
                 id="pepperoni"
                 name="size"
                 value="pepperoni"
+                data-name="pepperoni"
+                data-price="2"
               />
-              <label for="pepperoni">Pepperoni</label><br />
+              <label for="pepperoni">Pepperoni (+$2)</label><br />
             </form>
             <form id="mushroom">
-              <input type="radio" id="mushroom" name="size" value="mushroom" />
-              <label for="mushroom">Mushroom</label>
+              <input
+                type="radio"
+                id="mushroom"
+                name="size"
+                value="mushroom"
+                data-name="mushroom"
+                data-price="2"
+              />
+              <label for="mushroom">Mushroom (+$2)</label>
             </form>
             <form id="onion">
-              <input type="radio" id="onion" name="size" value="onion" />
-              <label for="onion">Red Onion</label>
+              <input
+                type="radio"
+                id="onion"
+                name="size"
+                value="onion"
+                data-name="onion"
+                data-price="2"
+              />
+              <label for="onion">Red Onion (+$2)</label>
             </form>
           </div>
         </div>
-        <button id="checkoutButton" class="bg-danger" type="submit">Check out</button>
+        <button id="checkoutButton" class="bg-danger" type="submit">
+          Check out
+        </button>
       </div>
       <!-- order summary -->
       <div class="sidenav order">
         <h3>Order summary</h3>
-        <p>Your Total: <span id="price"></span></p>
+        <ul id = "show-cart">
+          <li></li>
+        </ul>
+         
+        <div>Your Total: <span id="price"></span></div>
         <h5>Enter your Delivery Address</h5>
         <form id="name">
           <input

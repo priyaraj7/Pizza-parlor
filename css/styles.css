@@ -31,23 +31,23 @@ body {
 }
 .custom {
   display: none;
-  padding: 100px; 
+  padding: 100px;
   margin-right: 200px;
 }
-.custom button{
+.custom button {
   font-size: 24px;
 }
 
 .sidenav {
-  /* display: none; */
+  display: none;
   margin-top: 75px;
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */  
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   top: 0; /* Stay at the top */
   right: 0;
-  background-color: lightgrey; 
-  padding: 60px; 
+  background-color: lightgrey;
+  padding: 60px;
 }
 .thanks {
-  /* display: none; */
-  margin-top:80px ;
+  display: none;
+  margin-top: 80px;
 }

@@ -1,4 +1,4 @@
-function Pizza(size, price, toppings) {
+function Pizza(size, price) {
   this.size = size;
   this.price = price;
   this.toppings = [];

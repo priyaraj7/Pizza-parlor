@@ -51,7 +51,7 @@ $(document).ready(function() {
   $("#checkoutButton").click(function() {
     $("#price").empty();
     // for getting radio button value
-    var sizeEl = $('input[name="size"]');
+    var sizeEl = $('input[name="size"]:checked');
     // getting the value form checkbox
     const selectedToppings = Array.from($(".toppings:checked")).map(topping =>
       $(topping).data()

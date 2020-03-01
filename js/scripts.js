@@ -34,15 +34,20 @@ $(document).ready(function() {
   $("#checkoutButton").click(function() {
     $("#price").empty();
     // for getting radio button value
-    var sizeEl = $('input[name="size"]:checked');
+    let sizeEl = $('input[name="size"]:checked');
     // getting the value form checkbox
-    const selectedToppings = Array.from($(".toppings:checked")).map(topping =>
+    let selectedToppings = Array.from($(".toppings:checked")).map(topping =>
       $(topping).data()
     );
     const pizza = new Pizza(sizeEl.val(), sizeEl.data("price"));
     selectedToppings.forEach(topping => pizza.addToppings(topping));
-    $("#price").append(pizza.getTotalPrice());
-    $(".order").show();
+
+    if (sizeEl.length === 0) {
+      alert("Please select size.");
+    } else {
+      $("#price").append(pizza.getTotalPrice());
+      $(".order").show();
+    }
   });
   // thank you page
   $(".place-order").click(function() {

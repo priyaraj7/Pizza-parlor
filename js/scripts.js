@@ -1,81 +1,71 @@
-function CustomizePizza(topping, price, count) {
-  this.topping = topping;
+function Pizza(size, price, toppings) {
+  this.size = size;
   this.price = price;
-  this.count = count;
+  this.toppings = [];
 }
-let cart=[];
-CustomizePizza.prototype.addItemToCart = function() {
-    
-  for (var i = o; i <= cart.length; i++) {
-    if (cart[i].topping === topping) {
-        cart[i].count ++;
-      return;
-    }
-  }
-  
-  cart.push(customizePizza);
+Pizza.prototype.addToppings = function(topping) {
+  this.toppings.push(topping);
 };
-console.log(cart);
- 
-CustomizePizza.prototype.removeItemToCart = function() {
-  for (var i = o; i <= cart.length; i++) {
-    if (cart[i].topping === topping) {
-        cart[i].count --;
+
+Pizza.prototype.getTotalPrice = function() {
+  let total = 0;
+  for (let i = 0; i < this.toppings.length; i++) {
+    total = total + this.toppings[i].price;
   }
-} 
-// User Interface
-let customizePizza = new CustomizePizza();
+  return total + this.price;
+};
 
-customizePizza.addToppings("small", 10);
-customizePizza.addToppings("medium", 12);
-customizePizza.addToppings("large", 14);
-customizePizza.addToppings("pepperoni", 2);
-customizePizza.addToppings("cheese", 2);
-customizePizza.addToppings("mushroom", 2);
-customizePizza.addToppings("onion", 2);
+// let pizza = new Pizza("small", 10);
 
+// pizza.addToppings({ name: "paparoni", price: 2 });
+// pizza.addToppings({ name: "mushroom", price: 2 });
+// pizza.addToppings({ name: "red onion", price: 2 });
+// pizza.addToppings({ name: "cheese", price: 2 });
 
+// function displayCartDetails(itemsToDisplay) {
+//   var itemList = $("ul#show-cart");
+//   var htmlForCartInfo = "";
+//   itemsToDisplay.items.forEach(function(item) {
+//     htmlForCartInfo += "<li id=" + item.id + ">" + item.firstName + " " + item.lastName + "</li>";
+//   });
+//   itemList.html(htmlForCartInfo);
+// };
 
-var readyMadePizza = "$10";
+var readyMadePizza = "15";
 $(document).ready(function() {
- 
-
   // for readyMadePizza
   $("#ready").click(function() {
+    $("#price").empty();
     $("#price").append(readyMadePizza);
+    $(".order").show();
+    // $(".mainpage").hide();
   });
 
   // for customizePizza
   $("#customize").click(function() {
-    $(".mainpage").hide(); 
+    $(".mainpage").hide();
+    $(".order").hide();
     $(".custom").show();
   });
 
-   // for select/deselect radio button
-   $('[type="radio"]').click(function() {
-    if ($(this).attr("checked")) {
-      $(this).removeAttr("checked");
-      $(this).prop("checked", false);
-    } else {
-      $(this).attr("checked", "checked");
-    }
+  $("#checkoutButton").click(function() {
+    $("#price").empty();
+    // for getting radio button value
+    var sizeEl = $('input[name="size"]');
+    // getting the value form checkbox
+    const selectedToppings = Array.from($(".toppings:checked")).map(topping =>
+      $(topping).data()
+    );
+    const pizza = new Pizza(sizeEl.val(), sizeEl.data("price"));
+    selectedToppings.forEach(topping => pizza.addToppings(topping));
+    $("#price").append(pizza.getTotalPrice());
+    $(".order").show();
   });
-
-  // for getting radio button value
-  $('#checkoutButton').click(function() {
-  var small = $("#small[name=size]:checked").val();
-  var medium = $(".medium[name=size]:checked").val();
-  var large = $(".large[name=size]:checked").val();
-  var value = $("input[name=RadioGroup1]:checked").val();
-  var value = $("input[name=RadioGroup1]:checked").val();
-  var value = $("input[name=RadioGroup1]:checked").val();
-  var value = $("input[name=RadioGroup1]:checked").val();
-
-  console.log("The user selected; " + small);
-});
-
-
-
-
-
+  // thank you page
+  $(".place-order").click(function() {
+    $(".order").hide();
+    $(".custom").hide();
+    $(".mainpage").hide();
+    $(".thanks").show();
+  });
 });

@@ -15,22 +15,6 @@ Pizza.prototype.getTotalPrice = function() {
   return total + this.price;
 };
 
-// let pizza = new Pizza("small", 10);
-
-// pizza.addToppings({ name: "paparoni", price: 2 });
-// pizza.addToppings({ name: "mushroom", price: 2 });
-// pizza.addToppings({ name: "red onion", price: 2 });
-// pizza.addToppings({ name: "cheese", price: 2 });
-
-// function displayCartDetails(itemsToDisplay) {
-//   var itemList = $("ul#show-cart");
-//   var htmlForCartInfo = "";
-//   itemsToDisplay.items.forEach(function(item) {
-//     htmlForCartInfo += "<li id=" + item.id + ">" + item.firstName + " " + item.lastName + "</li>";
-//   });
-//   itemList.html(htmlForCartInfo);
-// };
-
 var readyMadePizza = "15";
 $(document).ready(function() {
   // for readyMadePizza
@@ -38,7 +22,6 @@ $(document).ready(function() {
     $("#price").empty();
     $("#price").append(readyMadePizza);
     $(".order").show();
-    // $(".mainpage").hide();
   });
 
   // for customizePizza

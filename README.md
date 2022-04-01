@@ -10,6 +10,10 @@ This application allows the user to select the size and and toppings of their ch
 
 To see this webpage [click here](https://priyaraj7.github.io/Pizza-parlor/).
 
+![](/img/readme-1.png)
+![](/img/readme-2.png)
+
+
 ## Specifications:
 
 | Behavior                                                                             |       Input Example       | Output Example |
